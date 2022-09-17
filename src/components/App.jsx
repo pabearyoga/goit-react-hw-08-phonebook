@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
-import  Filter  from "./Filter/Filter";
+import Filter from "./Filter/Filter";
+import css from "./App.module.css"
 
 class App extends Component {
 
@@ -42,8 +43,10 @@ class App extends Component {
         const filtredContacts = this.getFiltredContacts()
 
         return (
-            <div>
+            <div className={css.main}>
+                <h1 className={css.title}>Phonebook</h1>
                 <ContactForm onSubmit={this.formSubmitHandler} />
+                <h2 className={css.upperTitle}>Contacts</h2>
                 <Filter onChange={this.changeFilter} value={this.state.filter} />
                 <ContactList contacts={filtredContacts} onDelete={this.handleDelete}  />
             </div>
