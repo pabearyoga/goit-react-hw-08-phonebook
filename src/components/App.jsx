@@ -15,6 +15,15 @@ class App extends Component {
         this.setState(prevState => ({
             contacts: [...prevState.contacts, newContact],
         }));
+
+        if (this.state.contacts.some(value => value.name === newContact.name)) {
+            this.setState(prevState => ({
+                contacts: [...prevState.contacts],
+            }));
+            alert(`${newContact.name} is already in contacts`)
+            this.handleDelete(newContact.id)
+        }
+
     }
 
     handleDelete = contactId => {
