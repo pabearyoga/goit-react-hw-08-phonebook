@@ -12,18 +12,13 @@ class App extends Component {
     }
 
     formSubmitHandler = newContact => {
-        this.setState(prevState => ({
-            contacts: [...prevState.contacts, newContact],
-        }));
-
         if (this.state.contacts.some(value => value.name === newContact.name)) {
-            this.setState(prevState => ({
-                contacts: [...prevState.contacts],
-            }));
             alert(`${newContact.name} is already in contacts`)
-            this.handleDelete(newContact.id)
+        } else {
+            this.setState(prevState => ({
+            contacts: [...prevState.contacts, newContact],
+            }));
         }
-
     }
 
     handleDelete = contactId => {
