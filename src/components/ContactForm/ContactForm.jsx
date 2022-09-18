@@ -7,7 +7,6 @@ class ContactForm extends Component {
     state = {
         name: '',
         number: '',
-        id: '',
     }
 
     handleChange = evt => {
