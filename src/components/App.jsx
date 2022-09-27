@@ -5,7 +5,7 @@ import Filter from "./Filter/Filter";
 import css from "./App.module.css"
 
 const App = () => {
-    const [contacts, setContacts] = useState(JSON.parse(localStorage.getItem('contacts')) ?? [],);
+    const [contacts, setContacts] = useState(() => { return JSON.parse(localStorage.getItem('contacts')) ?? []; });
     const [filter, setFilter] = useState('');
 
 
