@@ -12,7 +12,7 @@ const App = () => {
         if (contacts.some(value => value.name === newContact.name)) {
             alert(`${newContact.name} is already in contacts`)
         } else {
-            setContacts(prevState => ([...prevState,newContact ]))
+            setContacts(state => ([...state, newContact ]))
         }
     }
 
