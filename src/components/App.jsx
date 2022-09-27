@@ -9,11 +9,6 @@ const App = () => {
     const [contacts, setContacts] = useLocalStorage('contacts', []);
     const [filter, setFilter] = useState('');
 
-
-    // useEffect(() => {
-    //     localStorage.setItem('contacts', JSON.stringify(contacts))
-    // },[contacts])
-
     const formSubmitHandler = newContact => {
         if (contacts.some(value => value.name === newContact.name)) {
             alert(`${newContact.name} is already in contacts`)
