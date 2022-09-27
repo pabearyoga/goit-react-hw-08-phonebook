@@ -3,15 +3,16 @@ import ContactForm from "./ContactForm/ContactForm";
 import ContactList from "./ContactList/ContactList";
 import Filter from "./Filter/Filter";
 import css from "./App.module.css"
+import useLocalStorage from "hooks/useLocalStorage";
 
 const App = () => {
-    const [contacts, setContacts] = useState(() => { return JSON.parse(localStorage.getItem('contacts')) ?? []; });
+    const [contacts, setContacts] = useLocalStorage('contacts', []);
     const [filter, setFilter] = useState('');
 
 
-    useEffect(() => {
-        localStorage.setItem('contacts', JSON.stringify(contacts))
-    },[contacts])
+    // useEffect(() => {
+    //     localStorage.setItem('contacts', JSON.stringify(contacts))
+    // },[contacts])
 
     const formSubmitHandler = newContact => {
         if (contacts.some(value => value.name === newContact.name)) {
