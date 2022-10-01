@@ -7,13 +7,13 @@ const ContactForm = ({onSubmit}) => {
     const [number, setNumber] = useState('')
     const [id, setId] = useState('')
 
+
     const handleChange = evt => {
         const { name, value } = evt.target;
 
         switch (name) {
             case 'name':
                 setName(value)
-                setId(nanoid())
                 break;
         
             case 'number':
@@ -26,10 +26,13 @@ const ContactForm = ({onSubmit}) => {
 
     }
 
-    const handleSubmit = evt => {
+    const handleId = () => {
+        setId(nanoid());
+    }
 
+    const handleSubmit = evt => {
         evt.preventDefault();
-        onSubmit({name, number, id})
+        onSubmit({ name, number, id });
         reset();
 
     };
@@ -72,7 +75,7 @@ const ContactForm = ({onSubmit}) => {
                 />
             </label>
 
-            <button type="submit" className={css.formBtn}>Add contact</button>
+            <button type="submit" className={css.formBtn} onClick={handleId}>Add contact</button>
 
         </form>
     )
