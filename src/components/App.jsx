@@ -36,7 +36,7 @@ const App = () => {
             <div className={css.main}>
                 <h1 className={css.title}>Phonebook</h1>
                 <ContactForm onSubmit={formSubmitHandler} />
-                <h2 className={css.upperTitle}>Contacts</h2>
+                <h2 className={css.upperTitle}>Contacts: {contacts.length}</h2>
                 <Filter onChange={changeFilter} value={filter} />
                 <ContactList contacts={getFiltredContacts()} onDelete={handleDelete}  />
             </div>
