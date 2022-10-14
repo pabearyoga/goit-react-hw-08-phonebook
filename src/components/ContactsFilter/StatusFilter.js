@@ -1,36 +1,25 @@
-import { useSelector, useDispatch } from 'react-redux';
-import { Button } from 'components/Button/Button';
-import { statusFilters } from 'redux/constants';
-import { getStatusFilter } from 'redux/selectors';
-import { setStatusFilter } from 'redux/filtersSlice';
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filtersSlice';
 import css from './StatusFilter.module.css';
 
 export const StatusFilter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(getStatusFilter);
 
-  const handleFilterChange = filter => dispatch(setStatusFilter(filter));
+  const handleFilterChange = event => {
+    const filterInput = event.target;
+    dispatch(setFilter(filterInput.value));
+  };
 
   return (
     <div className={css.wrapper}>
-      <Button
-        selected={filter === statusFilters.all}
-        onClick={() => handleFilterChange(statusFilters.all)}
-      >
-        All
-      </Button>
-      <Button
-        selected={filter === statusFilters.active}
-        onClick={() => handleFilterChange(statusFilters.active)}
-      >
-        Active
-      </Button>
-      <Button
-        selected={filter === statusFilters.completed}
-        onClick={() => handleFilterChange(statusFilters.completed)}
-      >
-        Completed
-      </Button>
+      <input
+        type="text"
+        className={css.inputFilter}
+        name="filter"
+        // value={value}
+        onChange={handleFilterChange}
+        required
+      />
     </div>
   );
 };
