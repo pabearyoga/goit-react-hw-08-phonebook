@@ -2,7 +2,7 @@ import { useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filtersSlice';
 import css from './ContactsFilter.module.css';
 
-export const StatusFilter = () => {
+export const ContactsFilter = () => {
   const dispatch = useDispatch();
 
   const handleFilterChange = event => {
@@ -17,6 +17,7 @@ export const StatusFilter = () => {
         className={css.inputFilter}
         name="filter"
         // value={value}
+        placeholder="Find contacts by name"
         onChange={handleFilterChange}
         required
       />

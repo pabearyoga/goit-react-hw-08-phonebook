@@ -2,3 +2,14 @@
   display: flex;
   gap: 4px;
 }
+
+.inputFilter {
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(65, 105, 225);
+  border-image: initial;
+  border-radius: 30px;
+  padding: 5px;
+  width: 200px;
+  text-align: center;
+}

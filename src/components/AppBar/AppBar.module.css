@@ -1,6 +1,21 @@
 .wrapper {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1100;
+
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background-color: #fff;
+  color: #4169e1;
+  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
+  border-radius: 50px;
+  min-height: 80px;
 }
 
 .section {
@@ -9,6 +24,13 @@
 }
 
 .title {
-  margin: 0;
-  font-size: 16px;
+  border-radius: 50px;
+  color: #4169e1;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.counter {
+  color: #f44336;
 }

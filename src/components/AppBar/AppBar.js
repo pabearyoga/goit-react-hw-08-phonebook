@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
-import { StatusFilter } from 'components/ContactsFilter/ContactsFilter.js';
+import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter.js';
 import css from './AppBar.module.css';
 
 export const AppBar = () => {
@@ -10,12 +10,12 @@ export const AppBar = () => {
     <header className={css.wrapper}>
       <section className={css.section}>
         <h2 className={css.title}>
-          Contacts: <span>{contacts.length}</span>
+          Contacts: <span className={css.counter}>{contacts.length}</span>
         </h2>
       </section>
       <section className={css.section}>
-        <h2 className={css.title}>Find contacts by name:</h2>
-        <StatusFilter />
+        {/* <h2 className={css.title}>Find contacts by name:</h2> */}
+        <ContactsFilter />
       </section>
     </header>
   );
