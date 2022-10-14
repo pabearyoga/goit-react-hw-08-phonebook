@@ -1,28 +1,14 @@
-.contactForm {
+.form {
   display: flex;
-  flex-direction: column;
-  padding: 50px;
-  margin-bottom: 20px;
-  border: 2px solid red;
-  border-radius: 10px;
-  background-color: #f8f8f8;
+  gap: 4px;
 }
-.contactLabel {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-  color: #4169e1;
+
+.field {
+  flex-grow: 1;
+  padding: 8px;
+  font: inherit;
 }
-.contactInput {
-  border: 1px solid #4169e1;
-  border-radius: 30px;
-  padding: 5px;
-}
-.formBtn {
-  padding: 5px;
-  background: #4169e1;
-  border: 1px solid #4169e1;
-  border-radius: 30px;
-  color: white;
+
+.field:focus {
+  outline-color: #1976d2;
 }
