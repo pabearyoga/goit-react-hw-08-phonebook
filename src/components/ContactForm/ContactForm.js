@@ -14,6 +14,8 @@ export const ContactForm = () => {
     const form = event.target;
     if (contacts.some(value => value.name === form.elements.name.value)) {
       alert(`"${form.elements.name.value}" is already in contacts`);
+    } else if (form.elements.number.value === '') {
+      alert('Please enter phone number !');
     } else {
       dispatch(
         addContact(form.elements.name.value, form.elements.number.value)
