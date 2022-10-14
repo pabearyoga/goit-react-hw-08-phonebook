@@ -1,4 +1,4 @@
-import { StatusFilter } from 'components/ContactsFilter/StatusFilter.js';
+import { StatusFilter } from 'components/ContactsFilter/ContactsFilter.js';
 import css from './AppBar.module.css';
 
 export const AppBar = () => {
