@@ -16,7 +16,7 @@
   box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
 }
 
-.text {
+.textWrapper {
   display: flex;
   justify-content: space-between;
   flex-grow: 1;

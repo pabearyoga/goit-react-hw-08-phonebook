@@ -34,7 +34,6 @@ const Modal = ({ onClose }) => {
 };
 
 Modal.propTypes = {
-  largeIMG: PropTypes.object.isRequired,
   onClose: PropTypes.func.isRequired,
 };
 

@@ -16,6 +16,7 @@ export const ContactsFilter = () => {
         type="text"
         className={css.inputFilter}
         name="filter"
+        autoComplete="off"
         // value={value}
         placeholder="Find contacts by name"
         onChange={handleFilterChange}

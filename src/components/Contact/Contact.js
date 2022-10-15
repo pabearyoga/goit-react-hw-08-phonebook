@@ -10,9 +10,9 @@ export const Contact = ({ contact }) => {
 
   return (
     <div className={css.wrapper}>
-      <div className={css.text}>
-        <p>{contact.name}:</p>
-        <p>{contact.number}</p>
+      <div className={css.textWrapper}>
+        <p className={css.text}>{contact.name}:</p>
+        <p className={css.text}>{contact.number}</p>
       </div>
       <button className={css.btn} onClick={handleDelete}>
         <MdClose size={24} />
