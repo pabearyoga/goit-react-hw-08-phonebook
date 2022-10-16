@@ -7,7 +7,7 @@ import Modal from "./Modal/Modal";
 export const App = () => {
 
   const [modal, setModal] = useState(false);
-// test
+  
   const toggleModal = () => {
       setModal(!modal)
     };
