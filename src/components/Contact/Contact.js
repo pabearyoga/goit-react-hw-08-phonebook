@@ -2,7 +2,6 @@ import { useDispatch } from 'react-redux';
 import { MdClose } from 'react-icons/md';
 import { deleteContact } from 'redux/contactsSlice';
 import css from './Contact.module.css';
-import animate from 'animate.css/animate.module.css';
 
 export const Contact = ({ contact }) => {
   const dispatch = useDispatch();
@@ -11,7 +10,7 @@ export const Contact = ({ contact }) => {
 
   return (
     <div
-      className={`${css.wrapper} ${animate.animate__animated} ${animate.animate__bounceInUp}`}
+      className={`${css.wrapper} ${css.animate__animated} ${css.animate__bounceInUp}`}
     >
       <div className={css.textWrapper}>
         <p className={css.text}>{contact.name}:</p>

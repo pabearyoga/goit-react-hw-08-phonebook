@@ -2,7 +2,6 @@ import { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import css from './Modal.module.css';
-import animate from 'animate.css/animate.module.css';
 
 const Modal = ({ onClose }) => {
   useEffect(() => {
@@ -28,7 +27,7 @@ const Modal = ({ onClose }) => {
   return (
     <div className={css.Overlay} id="Overlay" onClick={handelCloseModal}>
       <div
-        className={`${css.Modal} ${animate.animate__animated} ${animate.animate__bounceInUp}`}
+        className={`${css.Modal} ${css.animate__animated} ${css.animate__bounceInUp}`}
       >
         <ContactForm />
       </div>
