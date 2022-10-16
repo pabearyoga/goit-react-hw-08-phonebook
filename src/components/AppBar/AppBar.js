@@ -15,16 +15,19 @@ export const AppBar = ({ onOpen }) => {
         <h2 className={css.title}>
           Contacts: <span className={css.counter}>{contacts.length}</span>
         </h2>
+        <button type="button" className={cssBtn.btn} onClick={() => onOpen()}>
+          <MdPersonAdd size={16} />
+        </button>
       </section>
 
-      <section className={css.section}>
-        <ContactsFilter />
-      </section>
-
-      <section className={css.section}>
+      {/* <section className={css.section}>
         <button type="button" className={cssBtn.btn} onClick={() => onOpen()}>
           <MdPersonAdd size={24} />
         </button>
+      </section> */}
+
+      <section className={css.section}>
+        <ContactsFilter />
       </section>
     </header>
   );

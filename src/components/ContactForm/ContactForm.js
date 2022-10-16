@@ -27,7 +27,6 @@ export const ContactForm = () => {
 
   return (
     <form className={css.form} onSubmit={handleSubmit}>
-      <p className={css.title}>Please enter your details:</p>
       <input
         className={css.field}
         type="text"

@@ -1,21 +1,14 @@
 .wrapper {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   gap: 4px;
 }
 
 .inputFilter {
-  border-width: 1px;
-  border-style: solid;
-  border-color: rgb(65, 105, 225);
-  border-image: initial;
+  padding: 8px 40px;
+  font: inherit;
+  border: 1px solid #4169e1;
   border-radius: 30px;
-  padding: 5px;
-  width: 200px;
-  text-align: center;
   color: #f44336;
+  text-align: center;
 }
 
 .inputFilter:hover {

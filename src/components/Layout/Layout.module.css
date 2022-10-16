@@ -1,4 +1,5 @@
 .container {
+  position: relative;
   display: grid;
   gap: 16px;
   max-width: 800px;

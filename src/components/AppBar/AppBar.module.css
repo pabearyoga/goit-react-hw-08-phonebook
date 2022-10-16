@@ -1,15 +1,14 @@
 .wrapper {
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  left: 0;
+  left: 100px;
   z-index: 1100;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 20px;
-  padding-left: 20px;
+  flex-wrap: wrap;
+  padding: 10px 20px;
 
   background-color: #fff;
   color: #4169e1;
@@ -19,8 +18,12 @@
 }
 
 .section {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 4px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .title {
@@ -29,6 +32,7 @@
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
+  margin-right: 20px;
 }
 
 .counter {
