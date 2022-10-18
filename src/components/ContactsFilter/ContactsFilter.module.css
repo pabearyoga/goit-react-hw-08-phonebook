@@ -7,16 +7,18 @@
   font: inherit;
   border: 1px solid #4169e1;
   border-radius: 30px;
-  color: #f44336;
+  color: #4169e1;
   text-align: center;
 }
 
 .inputFilter:hover {
-  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
+  box-shadow: 0 2px 8px 1px rgb(255 0 0 / 90%);
+  border: 1px solid #f44336;
+  color: #f44336;
 }
 
 .inputFilter:focus {
   outline-color: transparent;
   box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
-  color: #4169e1;
+  color: #f44336;
 }
