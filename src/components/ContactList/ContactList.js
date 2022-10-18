@@ -24,7 +24,7 @@ export const ContactList = () => {
         contacts:
       </h2>
       {contacts.length === 0 ? (
-        <p className={css.text}>please add contact !</p>
+        <p className={css.text}>...please add contact !</p>
       ) : (
         <ul className={css.list}>
           {visibleContacts.map(contact => (
