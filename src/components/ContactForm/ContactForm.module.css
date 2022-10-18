@@ -5,8 +5,8 @@
   flex-wrap: wrap;
   padding: 10px 50px;
   background-color: #fff;
-  color: #4169e1;
-  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
+  color: #010101;
+  box-shadow: 0 2px 8px 1px rgb(1 1 1 / 90%);
   border-radius: 50px;
   min-height: 80px;
   min-width: 300px;
@@ -16,9 +16,9 @@
   flex-grow: 1;
   padding: 8px;
   font: inherit;
-  border: 1px solid #4169e1;
+  border: 1px solid #010101;
   border-radius: 30px;
-  color: #4169e1;
+  color: #010101;
   margin-right: 10px;
   min-width: 300px;
 }
@@ -31,12 +31,12 @@
 
 .field:focus {
   outline-color: transparent;
-  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
+  box-shadow: 0 2px 8px 1px rgb(1 1 1 / 90%);
   color: #f44336;
 }
 
 .title {
-  color: #4169e1;
+  color: #010101;
   font-size: 20px;
   font-weight: 700;
   text-transform: uppercase;

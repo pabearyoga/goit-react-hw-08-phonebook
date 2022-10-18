@@ -17,11 +17,10 @@ export const Contact = ({ contact }) => {
         <p className={css.text}>
           {contact.name}: <span className={css.number}>{contact.number}</span>
         </p>
-        {/* <p className={css.text}>{contact.number}</p> */}
       </div>
-      <button className={css.btn} onClick={handleDelete}>
+      <button className={`${css.btn} ${css.btnTel}`} onClick={handleDelete}>
         <a href={`tel:${tel}`}>
-          <MdOutlinePhoneIphone fill="#4169e1" size={20} />
+          <MdOutlinePhoneIphone fill="#01c801" size={20} />
         </a>
       </button>
 

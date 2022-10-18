@@ -17,12 +17,23 @@ export const ContactList = () => {
   const visibleContacts = getFiltredContacts(contacts, filters);
 
   return (
-    <ul className={css.list}>
-      {visibleContacts.map(contact => (
-        <li key={contact.id}>
-          <Contact contact={contact} />
-        </li>
-      ))}
-    </ul>
+    <>
+      <h2 className={css.contactSum}>
+        Find:
+        <span className={css.contactSumValue}>{visibleContacts.length}</span>
+        contacts:
+      </h2>
+      {contacts.length === 0 ? (
+        <p className={css.text}>please add contact !</p>
+      ) : (
+        <ul className={css.list}>
+          {visibleContacts.map(contact => (
+            <li key={contact.id}>
+              <Contact contact={contact} />
+            </li>
+          ))}
+        </ul>
+      )}
+    </>
   );
 };

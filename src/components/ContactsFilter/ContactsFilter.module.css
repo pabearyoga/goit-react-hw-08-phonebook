@@ -5,9 +5,9 @@
 .inputFilter {
   padding: 8px 40px;
   font: inherit;
-  border: 1px solid #4169e1;
+  border: 1px solid #010101;
   border-radius: 30px;
-  color: #4169e1;
+  color: #010101;
   text-align: center;
 }
 
@@ -19,6 +19,6 @@
 
 .inputFilter:focus {
   outline-color: transparent;
-  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
+  box-shadow: 0 2px 8px 1px rgb(1 1 1 / 90%);
   color: #f44336;
 }

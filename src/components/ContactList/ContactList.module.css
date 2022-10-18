@@ -3,3 +3,31 @@
   padding: 0;
   list-style: none;
 }
+
+.contactSum {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border-bottom: 1px solid #f44336;
+  color: #010101;
+  margin: 0;
+  padding: 10px 20px;
+}
+
+.contactSumValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #f44336;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  color: #010101;
+  font-size: 42px;
+  font-weight: bold;
+}
