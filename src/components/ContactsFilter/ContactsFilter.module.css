@@ -17,6 +17,6 @@
 
 .inputFilter:focus {
   outline-color: transparent;
-  box-shadow: 0 2px 8px 1px rgb(255 0 0 / 90%);
+  box-shadow: 0 2px 8px 1px rgb(65 105 225 / 90%);
   color: #4169e1;
 }
