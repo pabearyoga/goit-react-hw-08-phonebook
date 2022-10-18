@@ -5,7 +5,7 @@ import { getFilters } from 'redux/selectors';
 import css from './ContactsFilter.module.css';
 
 export const ContactsFilter = () => {
-  const filters = useSelector(getFilters);
+  const { filters } = useSelector(getFilters);
 
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ export const ContactsFilter = () => {
         className={css.inputFilter}
         name="filter"
         autoComplete="off"
-        value={filters.filters}
+        value={filters}
         placeholder="Find contacts by name"
         onChange={handleFilterChange}
         required

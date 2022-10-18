@@ -4,15 +4,15 @@ import { getContacts, getFilters } from 'redux/selectors';
 import css from './ContactList.module.css';
 
 const getFiltredContacts = (contacts, filters) => {
-  const normalizeFilter = filters.filters.toLowerCase();
-  return contacts.contacts.filter(contact =>
+  const normalizeFilter = filters.toLowerCase();
+  return contacts.filter(contact =>
     contact.name.toLowerCase().includes(normalizeFilter)
   );
 };
 
 export const ContactList = () => {
-  const contacts = useSelector(getContacts);
-  const filters = useSelector(getFilters);
+  const { contacts } = useSelector(getContacts);
+  const { filters } = useSelector(getFilters);
 
   const visibleContacts = getFiltredContacts(contacts, filters);
 

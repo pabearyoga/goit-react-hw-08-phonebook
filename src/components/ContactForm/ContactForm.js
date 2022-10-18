@@ -5,16 +5,14 @@ import { addContact } from 'redux/contactsSlice';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
-  const contacts = useSelector(getContacts);
+  const { contacts } = useSelector(getContacts);
 
   const dispatch = useDispatch();
 
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.target;
-    if (
-      contacts.contacts.some(value => value.name === form.elements.name.value)
-    ) {
+    if (contacts.some(value => value.name === form.elements.name.value)) {
       alert(`"${form.elements.name.value}" is already in contacts`);
     } else if (form.elements.number.value === '') {
       alert('Please enter phone number !');

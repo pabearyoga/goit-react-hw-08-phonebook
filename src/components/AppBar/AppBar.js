@@ -7,7 +7,7 @@ import css from './AppBar.module.css';
 import cssBtn from '../Button/Button.module.css';
 
 export const AppBar = ({ onOpen }) => {
-  const contacts = useSelector(getContacts);
+  const { contacts } = useSelector(getContacts);
 
   return (
     <header className={css.wrapper}>
@@ -19,12 +19,6 @@ export const AppBar = ({ onOpen }) => {
           <MdPersonAdd size={16} />
         </button>
       </section>
-
-      {/* <section className={css.section}>
-        <button type="button" className={cssBtn.btn} onClick={() => onOpen()}>
-          <MdPersonAdd size={24} />
-        </button>
-      </section> */}
 
       <section className={css.section}>
         <ContactsFilter />
