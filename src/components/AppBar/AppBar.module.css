@@ -17,18 +17,11 @@
   min-height: 80px;
 }
 
-@media screen and (max-width: 570px) {
-  .wrapper {
-    justify-content: center;
-  }
-}
 .section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  margin-top: 2px;
-  margin-bottom: 2px;
 }
 
 .logo {
@@ -39,5 +32,19 @@
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-right: 20px;
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 558px) {
+  .wrapper {
+    justify-content: center;
+  }
+
+  .section:first-child {
+    margin-bottom: 4px;
+  }
+
+  .logo {
+    margin-right: 42px;
+  }
 }

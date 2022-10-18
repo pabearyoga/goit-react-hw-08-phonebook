@@ -29,3 +29,9 @@
   font-size: 24px;
   font-weight: bold;
 }
+
+@media screen and (max-width: 552px) {
+  .contactSum {
+    margin-top: 30px;
+  }
+}
