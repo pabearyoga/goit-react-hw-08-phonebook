@@ -11,11 +11,11 @@ export const App = () => {
 
   const toggleModal = () => {
       setModal(!modal)
-    };
-
+  };
+  
   return (
     <Layout>
-      <AppBar onOpen={toggleModal}/>
+      <AppBar onOpen={toggleModal}  />
       {modal && <Modal onClose={toggleModal} />}
       <ContactList />
     </Layout>

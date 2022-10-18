@@ -4,15 +4,22 @@
   list-style: none;
 }
 
+.countInfo {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #f44336;
+  color: #010101;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px 20px;
+}
+
 .contactSum {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 12px;
-  border-bottom: 1px solid #f44336;
-  color: #010101;
-  margin: 0;
-  padding: 10px 20px;
+  /* padding: 10px 20px; */
 }
 
 .contactSumValue {
@@ -25,13 +32,29 @@
 .text {
   text-align: center;
   gap: 12px;
+
   color: #010101;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
+  background-color: #f44336;
+  padding: 10px;
+  border-radius: 50px;
+  color: #fff;
+  text-transform: uppercase;
 }
 
 @media screen and (max-width: 552px) {
+  .countInfo {
+    margin-top: 40px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .countInfo {
+    flex-direction: column;
+  }
+
   .contactSum {
-    margin-top: 30px;
+    justify-content: space-between;
   }
 }

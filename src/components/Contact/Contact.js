@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { MdClose, MdOutlinePhoneIphone } from 'react-icons/md';
+import { MdClose, MdPhone } from 'react-icons/md';
 import { deleteContact } from 'redux/contactsSlice';
 import css from './Contact.module.css';
 
@@ -20,7 +20,7 @@ export const Contact = ({ contact }) => {
       </div>
       <button className={`${css.btn} ${css.btnTel}`}>
         <a href={`tel:${tel}`}>
-          <MdOutlinePhoneIphone fill="#01c801" size={20} />
+          <MdPhone fill="#01c801" size={18} />
         </a>
       </button>
 

@@ -18,13 +18,20 @@ export const ContactList = () => {
 
   return (
     <>
-      <h2 className={css.contactSum}>
-        Find:
-        <span className={css.contactSumValue}>{visibleContacts.length}</span>
-        contacts:
-      </h2>
+      <div className={css.countInfo}>
+        <p className={css.contactSum}>
+          all contacts:
+          <span className={css.contactSumValue}>{contacts.length}</span>
+        </p>
+        <p className={css.contactSum}>
+          find contacts:
+          <span className={css.contactSumValue}>{visibleContacts.length}</span>
+        </p>
+      </div>
       {contacts.length === 0 ? (
-        <p className={css.text}>...please add contact !</p>
+        <p className={css.text}>
+          The contact list is empty, please add a contact !
+        </p>
       ) : (
         <ul className={css.list}>
           {visibleContacts.map(contact => (
