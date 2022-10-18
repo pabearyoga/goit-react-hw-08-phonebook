@@ -25,6 +25,10 @@
   font-weight: 500;
 }
 
+.wrapper:hover .number {
+  color: #f44336;
+}
+
 .btn {
   display: flex;
   align-items: center;

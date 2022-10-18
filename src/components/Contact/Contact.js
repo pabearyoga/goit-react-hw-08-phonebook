@@ -15,7 +15,7 @@ export const Contact = ({ contact }) => {
     >
       <div className={css.textWrapper}>
         <p className={css.text}>
-          {contact.name}: {contact.number}
+          {contact.name}: <span className={css.number}>{contact.number}</span>
         </p>
         {/* <p className={css.text}>{contact.number}</p> */}
       </div>
