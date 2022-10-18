@@ -17,18 +17,25 @@
   min-height: 80px;
 }
 
+@media screen and (max-width: 570px) {
+  .wrapper {
+    justify-content: center;
+  }
+}
 .section {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 4px;
-  margin-right: auto;
-  margin-left: auto;
+  margin-top: 2px;
+  margin-bottom: 2px;
 }
 
 .logo {
+  background-color: #f44336;
+  padding: 10px;
   border-radius: 50px;
-  color: #f44336;
+  color: #fff;
   font-size: 24px;
   font-weight: 700;
   text-transform: uppercase;

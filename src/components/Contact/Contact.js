@@ -18,7 +18,7 @@ export const Contact = ({ contact }) => {
           {contact.name}: <span className={css.number}>{contact.number}</span>
         </p>
       </div>
-      <button className={`${css.btn} ${css.btnTel}`} onClick={handleDelete}>
+      <button className={`${css.btn} ${css.btnTel}`}>
         <a href={`tel:${tel}`}>
           <MdOutlinePhoneIphone fill="#01c801" size={20} />
         </a>
