@@ -4,10 +4,11 @@ import { AppBar } from "components/AppBar/AppBar";
 import { ContactList } from "components/ContactList/ContactList";
 import Modal from "./Modal/Modal";
 
+
 export const App = () => {
 
   const [modal, setModal] = useState(false);
-  
+
   const toggleModal = () => {
       setModal(!modal)
     };
