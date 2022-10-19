@@ -1,3 +1,6 @@
+import { useDispatch } from 'react-redux';
+import { setFilter } from 'redux/filtersSlice';
+
 import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter.js';
@@ -7,9 +10,14 @@ import cssBtn from '../Button/Button.module.css';
 
 export const AppBar = ({ onOpen }) => {
   const [search, setSearch] = useState(false);
+  const dispatch = useDispatch();
 
   const toggleSearch = () => {
     setSearch(!search);
+
+    if (search) {
+      dispatch(setFilter(''));
+    }
   };
 
   return (

@@ -15,11 +15,14 @@ export const ContactsFilter = () => {
   };
 
   return (
-    <div className={css.wrapper}>
+    <div
+      className={`${css.wrapper} ${css.animate__animated} ${css.animate__bounceInUp}`}
+    >
       <input
         type="text"
         className={css.inputFilter}
         name="filter"
+        autoFocus="on"
         autoComplete="off"
         value={filters}
         placeholder="Find contacts by name"

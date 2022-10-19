@@ -14,12 +14,20 @@ import { contactsReducer } from './contactsSlice';
 import { filtersReducer } from './filtersSlice';
 
 const persistConfig = {
-  key: 'phonebook',
+  key: 'contacts',
+  storage,
+};
+
+const persistConfigFilters = {
+  key: 'filters',
   storage,
 };
 
 const persistedContactsReducer = persistReducer(persistConfig, contactsReducer);
-const persistedFiltersReducer = persistReducer(persistConfig, filtersReducer);
+const persistedFiltersReducer = persistReducer(
+  persistConfigFilters,
+  filtersReducer
+);
 
 export const store = configureStore({
   reducer: {
