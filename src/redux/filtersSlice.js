@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const filtersInitialState = {
   filters: '',
+  isOpen: false,
 };
 
 const filtersSlice = createSlice({
@@ -11,8 +12,12 @@ const filtersSlice = createSlice({
     setFilter(state, action) {
       state.filters = action.payload;
     },
+    setIsOpen(state, action) {
+      console.log(action);
+      state.isOpen = action.payload;
+    },
   },
 });
 
-export const { setFilter } = filtersSlice.actions;
+export const { setFilter, setIsOpen } = filtersSlice.actions;
 export const filtersReducer = filtersSlice.reducer;

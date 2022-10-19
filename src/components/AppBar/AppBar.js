@@ -1,5 +1,6 @@
-import { useDispatch } from 'react-redux';
-import { setFilter } from 'redux/filtersSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { setFilter, setIsOpen } from 'redux/filtersSlice';
+import { getFilters } from 'redux/selectors';
 
 import PropTypes from 'prop-types';
 import { useState } from 'react';
@@ -9,8 +10,13 @@ import css from './AppBar.module.css';
 import cssBtn from '../Button/Button.module.css';
 
 export const AppBar = ({ onOpen }) => {
-  const [search, setSearch] = useState(false);
+  const { isOpen } = useSelector(getFilters);
+
+  const [search, setSearch] = useState(isOpen);
+
   const dispatch = useDispatch();
+
+  dispatch(setIsOpen(search));
 
   const toggleSearch = () => {
     setSearch(!search);
