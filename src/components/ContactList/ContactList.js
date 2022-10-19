@@ -5,9 +5,11 @@ import css from './ContactList.module.css';
 
 const getFiltredContacts = (contacts, filters) => {
   const normalizeFilter = filters.toLowerCase();
-  return contacts.filter(contact =>
-    contact.name.toLowerCase().includes(normalizeFilter)
-  );
+  return contacts
+    .filter(contact => contact.name.toLowerCase().includes(normalizeFilter))
+    .sort((firstContact, secondContact) =>
+      firstContact.name.localeCompare(secondContact.name)
+    );
 };
 
 export const ContactList = () => {

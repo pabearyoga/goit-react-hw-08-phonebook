@@ -13,7 +13,6 @@ const filtersSlice = createSlice({
       state.filters = action.payload;
     },
     setIsOpen(state, action) {
-      console.log(action);
       state.isOpen = action.payload;
     },
   },
