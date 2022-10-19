@@ -27,7 +27,7 @@
   animation-duration: 1s;
 }
 
-@keyframes bounceInUp {
+@keyframes bounceInDown {
   from,
   60%,
   75%,
@@ -65,6 +65,6 @@
   }
 }
 
-.animate__bounceInUp {
-  animation-name: bounceInUp;
+.animate__bounceInDown {
+  animation-name: bounceInDown;
 }

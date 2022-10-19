@@ -16,7 +16,7 @@ export const ContactsFilter = () => {
 
   return (
     <div
-      className={`${css.wrapper} ${css.animate__animated} ${css.animate__bounceInUp}`}
+      className={`${css.wrapper} ${css.animate__animated} ${css.animate__bounceInDown}`}
     >
       <input
         type="text"
