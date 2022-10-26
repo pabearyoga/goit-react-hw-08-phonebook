@@ -3,12 +3,17 @@ import { Layout } from "components/Layout/Layout";
 import { AppBar } from "components/AppBar/AppBar";
 import { ContactList } from "components/ContactList/ContactList";
 import Modal from "./Modal/Modal";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { fetchContacts } from "redux/operations";
+import { getError, getIsLoading } from "redux/selectors";
+import css from './ContactList/ContactList.module.css';
+
 
 
 export const App = () => {
   const dispatch = useDispatch();
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
 
   useEffect(() => {
     dispatch(fetchContacts());
@@ -25,6 +30,7 @@ export const App = () => {
     <Layout>
       <AppBar onOpen={toggleModal}  />
       {modal && <Modal onClose={toggleModal} />}
+      {isLoading && !error && <p className={css.text}>Request in progress...</p>}
       <ContactList />
     </Layout>
   );
