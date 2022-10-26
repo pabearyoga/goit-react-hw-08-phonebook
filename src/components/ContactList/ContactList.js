@@ -13,7 +13,7 @@ const getFiltredContacts = (contacts, filters) => {
 };
 
 export const ContactList = () => {
-  const { contacts } = useSelector(getContacts);
+  const contacts = useSelector(getContacts);
   const { filters } = useSelector(getFilters);
 
   const visibleContacts = getFiltredContacts(contacts, filters);

@@ -1,13 +1,20 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { getContacts } from 'redux/selectors';
 import { Button } from 'components/Button/Button';
-import { addContact } from 'redux/contactsSlice';
+import { addContact } from 'redux/operations';
 import css from './ContactForm.module.css';
 
 export const ContactForm = () => {
-  const { contacts } = useSelector(getContacts);
+  const contacts = useSelector(getContacts);
 
   const dispatch = useDispatch();
+
+  // const handleSubmit = event => {
+  //   event.preventDefault();
+  //   const form = event.target;
+  //   dispatch(addTask(event.target.elements.text.value));
+  //   form.reset();
+  // };
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -18,7 +25,10 @@ export const ContactForm = () => {
       alert('Please enter phone number !');
     } else {
       dispatch(
-        addContact(form.elements.name.value, form.elements.number.value)
+        addContact({
+          name: form.elements.name.value,
+          number: form.elements.number.value,
+        })
       );
     }
 
