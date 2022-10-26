@@ -1,6 +1,8 @@
 import { useSelector } from 'react-redux';
 import { Contact } from 'components/Contact/Contact';
 import { getContacts, getFilters } from 'redux/selectors';
+import { getError, getIsLoading } from 'redux/selectors';
+
 import css from './ContactList.module.css';
 
 const getFiltredContacts = (contacts, filters) => {
@@ -13,6 +15,9 @@ const getFiltredContacts = (contacts, filters) => {
 };
 
 export const ContactList = () => {
+  const isLoading = useSelector(getIsLoading);
+  const error = useSelector(getError);
+
   const contacts = useSelector(getContacts);
   const { filters } = useSelector(getFilters);
 
@@ -25,11 +30,15 @@ export const ContactList = () => {
           all contacts:
           <span className={css.contactSumValue}>{contacts.length}</span>
         </p>
+
         <p className={css.contactSum}>
           find contacts:
           <span className={css.contactSumValue}>{visibleContacts.length}</span>
         </p>
       </div>
+      {isLoading && !error && (
+        <p className={css.text}>Request in progress...</p>
+      )}
       {contacts.length === 0 ? (
         <p className={css.text}>
           The contact list is empty, please add a contact !
