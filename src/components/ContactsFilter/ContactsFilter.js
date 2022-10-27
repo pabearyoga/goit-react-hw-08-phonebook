@@ -2,6 +2,8 @@ import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filtersSlice';
 import { getFilters } from 'redux/selectors';
 
+import { MdSearch } from 'react-icons/md';
+
 import css from './ContactsFilter.module.css';
 
 export const ContactsFilter = () => {
@@ -15,20 +17,20 @@ export const ContactsFilter = () => {
   };
 
   return (
-    <div
-      className={`${css.wrapper} ${css.animate__animated} ${css.animate__bounceInDown}`}
-    >
+    <div className={css.wrapper}>
       <input
         type="text"
         className={css.inputFilter}
         name="filter"
-        autoFocus="on"
-        autoComplete="off"
         value={filters}
         placeholder="Find contacts by name"
         onChange={handleFilterChange}
         required
       />
+
+      <div className={css.searchImg}>
+        <MdSearch size={16} fill="#010101" />
+      </div>
     </div>
   );
 };
