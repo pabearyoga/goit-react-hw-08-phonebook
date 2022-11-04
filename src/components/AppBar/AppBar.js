@@ -1,28 +1,16 @@
-import PropTypes from 'prop-types';
-import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter.js';
-import { MdPersonAdd } from 'react-icons/md';
+import { Navigation } from '../Navigation/Navigation';
+import { UserMenu } from '../UserMenu/UserMenu';
+import { AuthNav } from '../AuthNav/AuthNav';
+import { useAuth } from '../../hooks/useAuth';
 import css from './AppBar.module.css';
-import cssBtn from '../Button/Button.module.css';
 
-export const AppBar = ({ onOpen }) => {
+export const AppBar = () => {
+  const { isLoggedIn } = useAuth();
+
   return (
-    <header className={css.wrapper}>
-      <section className={css.section}>
-        <h2 className={css.logo}>Phonebook</h2>
-      </section>
-
-      <section className={css.section}>
-        <div className={css.wrapperBtn}>
-          <ContactsFilter />
-          <button type="button" className={cssBtn.btn} onClick={() => onOpen()}>
-            <MdPersonAdd size={16} />
-          </button>
-        </div>
-      </section>
+    <header className={css.header}>
+      <Navigation />
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
-};
-
-AppBar.propTypes = {
-  onOpen: PropTypes.func.isRequired,
 };
