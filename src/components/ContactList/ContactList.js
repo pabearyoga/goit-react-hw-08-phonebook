@@ -4,7 +4,7 @@ import { Contact } from 'components/Contact/Contact';
 import { getContacts, getFilters, getIsLoading } from 'redux/selectors';
 import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter.js';
 import { MdPersonAdd } from 'react-icons/md';
-import cssBtn from '../Button/Button.module.css';
+import { Button } from 'components/Button/Button';
 
 import css from './ContactList.module.css';
 
@@ -35,13 +35,9 @@ export const ContactList = ({ onOpen }) => {
         <section className={css.section}>
           <div className={css.wrapperBtn}>
             <ContactsFilter />
-            <button
-              type="button"
-              className={cssBtn.btn}
-              onClick={() => onOpen()}
-            >
+            <Button onClick={() => onOpen()}>
               <MdPersonAdd size={16} />
-            </button>
+            </Button>
           </div>
         </section>
       </div>

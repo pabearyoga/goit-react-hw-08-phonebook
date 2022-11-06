@@ -9,13 +9,6 @@ export const ContactForm = () => {
 
   const dispatch = useDispatch();
 
-  // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   const form = event.target;
-  //   dispatch(addTask(event.target.elements.text.value));
-  //   form.reset();
-  // };
-
   const handleSubmit = event => {
     event.preventDefault();
     const form = event.target;

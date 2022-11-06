@@ -1,0 +1,22 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.username {
+  /* background-color: #f44336; */
+  border-radius: 50px;
+  color: #fff;
+  font-weight: 700;
+  padding: 10px;
+
+  box-shadow: 0 2px 8px 1px rgb(255 0 0 / 90%);
+  color: #f44336;
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper {
+    flex-direction: column;
+  }
+}

@@ -5,8 +5,7 @@
   z-index: 1100;
 
   display: flex;
-  /* justify-content: space-between; */
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   padding: 10px 20px;
@@ -18,33 +17,10 @@
   min-height: 80px;
 }
 
-.section {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 4px;
-}
-
-.logo {
-  background-color: #f44336;
-  padding: 10px;
-  border-radius: 50px;
-  color: #fff;
-  font-size: 24px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.wrapperBtn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 4px;
-}
-
 @media screen and (max-width: 600px) {
-  .section {
+  .wrapper {
     flex-direction: column;
+    justify-content: center;
   }
 }
 
