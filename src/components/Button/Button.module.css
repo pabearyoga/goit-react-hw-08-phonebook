@@ -1,0 +1,27 @@
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 12px;
+  border-radius: 30px;
+  border: 1px solid #010101;
+  font: inherit;
+  cursor: pointer;
+  background-color: #010101;
+  color: #fff;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn:hover {
+  background-color: #f44336;
+  border: none;
+  box-shadow: 0 2px 8px 1px rgb(1 1 1 / 90%);
+}
+
+.btn:focus-visible {
+  background-color: #010101;
+  border: none;
+  box-shadow: 0 2px 8px 1px rgb(255 0 0 / 90%);
+  outline: none;
+}
