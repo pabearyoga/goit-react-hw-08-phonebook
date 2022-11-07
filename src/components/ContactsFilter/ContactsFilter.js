@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
-import { setFilter } from 'redux/filtersSlice';
-import { getFilters } from 'redux/selectors';
+import { setFilter } from 'redux/contacts/filtersSlice';
+import { getFilters } from 'redux/contacts/selectors';
 
 import { MdSearch } from 'react-icons/md';
 

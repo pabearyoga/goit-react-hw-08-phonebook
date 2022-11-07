@@ -1,7 +1,11 @@
 import PropTypes from 'prop-types';
 import { useSelector } from 'react-redux';
 import { Contact } from 'components/Contact/Contact';
-import { getContacts, getFilters, getIsLoading } from 'redux/selectors';
+import {
+  getContacts,
+  getFilters,
+  getIsLoading,
+} from 'redux/contacts/selectors';
 import { ContactsFilter } from 'components/ContactsFilter/ContactsFilter.js';
 import { MdPersonAdd } from 'react-icons/md';
 import { Button } from 'components/Button/Button';
