@@ -30,11 +30,11 @@ export default function Home() {
       <h1>
         Welcome to <span style={styles.logo}>Phonebook</span> !
       </h1>
-
+      {/* 
       <p style={styles.text}>
         With this App you can safe your contacts in a one place. Safe,
         convenient and accessible at any time and anywhere in the world!
-      </p>
+      </p> */}
     </div>
   );
 }
