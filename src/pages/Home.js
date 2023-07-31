@@ -1,3 +1,5 @@
+import { Book } from 'components/Book/Book';
+
 const styles = {
   container: {
     height: '300px',
@@ -5,6 +7,15 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'column',
+    gap: '50px',
+  },
+  title: {
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexWrap: 'wrap',
+    gap: '5px',
+    marginTop: '20px',
   },
   logo: {
     backgroundColor: '#f44336',
@@ -27,14 +38,10 @@ const styles = {
 export default function Home() {
   return (
     <div style={styles.container}>
-      <h1>
+      <h1 style={styles.title}>
         Welcome to <span style={styles.logo}>Phonebook</span> !
       </h1>
-      {/* 
-      <p style={styles.text}>
-        With this App you can safe your contacts in a one place. Safe,
-        convenient and accessible at any time and anywhere in the world!
-      </p> */}
+      <Book></Book>
     </div>
   );
 }
